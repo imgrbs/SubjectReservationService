@@ -23,6 +23,13 @@ public class SubjectReservationController {
     @PostMapping("/subject/{subjectId}/reserve")
     @ResponseStatus(HttpStatus.NO_CONTENT)
     public void reserveSubject(@PathVariable String subjectId) {
+        /*
+         * This is a bad practice,
+         * because it's should get from session or decoding from a jwt token.
+         * then uses user id to find user from database.
+         *
+         * but we need quickly demo project.
+         */
         User mockUser = userRepository.findUserById(1L);
 
         subjectReservationService.reserveSubject(subjectId, mockUser);
