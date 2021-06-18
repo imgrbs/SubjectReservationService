@@ -28,7 +28,7 @@ public class SubjectReservationController {
          * because it's should get from session or decoding from a jwt token.
          * then uses user id to find user from database.
          *
-         * but we need quick demo project.
+         * but we need a quick demo project.
          */
         User mockUser = userRepository.findUserById(1L);
 
