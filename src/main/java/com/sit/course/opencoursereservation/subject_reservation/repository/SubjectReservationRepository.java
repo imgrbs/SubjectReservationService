@@ -1,13 +1,13 @@
 package com.sit.course.opencoursereservation.subject_reservation.repository;
 
-import com.sit.course.opencoursereservation.subject_reservation.model.Subject;
+import com.sit.course.opencoursereservation.subject_reservation.model.SubjectReservation;
 
 public interface SubjectReservationRepository {
     /**
-     * Finds subject by subject id.
+     * Saves a new subject reservation.
      *
-     * @param subjectId
-     * @return subject
+     * @param subjectReservation
+     * @return success subject reservation
      */
-    Subject findBySubjectId(String subjectId);
+    SubjectReservation save(SubjectReservation subjectReservation);
 }

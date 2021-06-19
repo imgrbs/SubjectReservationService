@@ -1,4 +1,4 @@
-package com.sit.course.opencoursereservation.subject_reservation.exception;
+package com.sit.course.opencoursereservation.exception;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;

@@ -1,6 +1,6 @@
 package com.sit.course.opencoursereservation.user.repository.internal;
 
-import com.sit.course.opencoursereservation.subject_reservation.exception.EntityNotFoundException;
+import com.sit.course.opencoursereservation.exception.EntityNotFoundException;
 import com.sit.course.opencoursereservation.user.model.User;
 import com.sit.course.opencoursereservation.user.repository.UserRepository;
 import org.springframework.stereotype.Repository;

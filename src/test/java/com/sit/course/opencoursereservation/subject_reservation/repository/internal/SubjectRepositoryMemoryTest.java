@@ -1,6 +1,6 @@
 package com.sit.course.opencoursereservation.subject_reservation.repository.internal;
 
-import com.sit.course.opencoursereservation.subject_reservation.exception.EntityNotFoundException;
+import com.sit.course.opencoursereservation.exception.EntityNotFoundException;
 import com.sit.course.opencoursereservation.subject_reservation.model.Subject;
 import org.hamcrest.CoreMatchers;
 import org.hamcrest.MatcherAssert;
@@ -8,13 +8,13 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-class SubjectReservationRepositoryMemoryTest {
+class SubjectRepositoryMemoryTest {
 
-    private SubjectReservationRepositoryMemory underTest;
+    private SubjectRepositoryMemory underTest;
 
     @BeforeEach
     void setUp() {
-        underTest = new SubjectReservationRepositoryMemory();
+        underTest = new SubjectRepositoryMemory();
     }
 
     @Test
