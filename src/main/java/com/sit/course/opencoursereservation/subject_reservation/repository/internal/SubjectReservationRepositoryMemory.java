@@ -9,7 +9,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 @Repository
-public class SubjectReservationRepositoryImpl implements SubjectReservationRepository {
+public class SubjectReservationRepositoryMemory implements SubjectReservationRepository {
     private Map<Long, SubjectReservation> subjectReservations = new HashMap<Long, SubjectReservation>();
 
     @Override

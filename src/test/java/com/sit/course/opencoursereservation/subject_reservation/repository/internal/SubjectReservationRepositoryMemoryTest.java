@@ -11,14 +11,12 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 
-import static org.junit.jupiter.api.Assertions.*;
-
-class SubjectReservationRepositoryImplTest {
-    private SubjectReservationRepositoryImpl underTest;
+class SubjectReservationRepositoryMemoryTest {
+    private SubjectReservationRepositoryMemory underTest;
 
     @BeforeEach
     void setUp() {
-        underTest = new SubjectReservationRepositoryImpl();
+        underTest = new SubjectReservationRepositoryMemory();
     }
 
     @Test
