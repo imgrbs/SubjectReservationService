@@ -1,5 +1,6 @@
 package com.sit.course.opencoursereservation.subject_reservation.service;
 
+import com.sit.course.opencoursereservation.subject_reservation.model.SubjectReservation;
 import com.sit.course.opencoursereservation.user.model.User;
 
 public interface SubjectReservationService {
@@ -9,5 +10,5 @@ public interface SubjectReservationService {
      * @param subjectId
      * @param user
      */
-    void reserveSubject(String subjectId, User user);
+    SubjectReservation reserveSubject(String subjectId, User user);
 }

@@ -21,7 +21,7 @@ public class SubjectReservationServiceImpl implements SubjectReservationService 
     private SubjectReservationRepository subjectReservationRepository;
 
     @Override
-    public void reserveSubject(String subjectId, User user) {
+    public SubjectReservation reserveSubject(String subjectId, User user) {
         Subject subject = subjectRepository.findBySubjectId(subjectId);
 
         if (subject.getCurrentStudentNumber() == subject.getQuota()) {
@@ -31,6 +31,7 @@ public class SubjectReservationServiceImpl implements SubjectReservationService 
         int currentStudentNumber = subject.getCurrentStudentNumber() + 1;
         subject.setCurrentStudentNumber(currentStudentNumber);
 
-        subjectReservationRepository.save(new SubjectReservation(subject, user));
+        SubjectReservation savedReservation = subjectReservationRepository.save(new SubjectReservation(subject, user));
+        return savedReservation;
     }
 }

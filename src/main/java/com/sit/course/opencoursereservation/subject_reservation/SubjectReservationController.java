@@ -21,7 +21,7 @@ public class SubjectReservationController {
     private UserRepository userRepository;
 
     @PostMapping("/subject/{subjectId}/reserve")
-    @ResponseStatus(HttpStatus.NO_CONTENT)
+    @ResponseStatus(HttpStatus.OK)
     public void reserveSubject(@PathVariable String subjectId) {
         /*
          * This is a bad practice,
