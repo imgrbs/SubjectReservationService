@@ -1,5 +1,6 @@
 package com.sit.course.opencoursereservation.subject_reservation;
 
+import com.sit.course.opencoursereservation.subject_reservation.model.SubjectReservation;
 import com.sit.course.opencoursereservation.user.model.User;
 import com.sit.course.opencoursereservation.subject_reservation.service.SubjectReservationService;
 import com.sit.course.opencoursereservation.user.repository.UserRepository;
@@ -22,7 +23,7 @@ public class SubjectReservationController {
 
     @PostMapping("/subject/{subjectId}/reserve")
     @ResponseStatus(HttpStatus.OK)
-    public void reserveSubject(@PathVariable String subjectId) {
+    public SubjectReservation reserveSubject(@PathVariable String subjectId) {
         /*
          * This is a bad practice,
          * because it's should get from session or decoding from a jwt token.
@@ -32,6 +33,6 @@ public class SubjectReservationController {
          */
         User mockUser = userRepository.findUserById(1L);
 
-        subjectReservationService.reserveSubject(subjectId, mockUser);
+        return subjectReservationService.reserveSubject(subjectId, mockUser);
     }
 }
